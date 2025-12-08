@@ -1,19 +1,20 @@
 import './App.css'
-
-function Welcome(){
-  return <h2>Hi, this is Akash.</h2>
-}
-
-function Button(){
-  return <button>Click Me</button>
-}
+import { Welcome } from './welcome'
+import { Button } from './Button'
+import { Hello, HelloWithoutJSX } from './Hello'
+import { Card, Card2 } from './Card'
 
 function App() {
   return (
     <div>
       <h1>React World</h1>
+      <Hello />
       <Welcome />
       <Button />
+      <HelloWithoutJSX />
+      <Card />
+      <Card2 />
+    
     </div>
   )
 }
