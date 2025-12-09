@@ -11,6 +11,7 @@ import { SpreadPropsPattern } from "./SpreadPropsPattern.jsx";
 import { WrapJsxPropsPattern } from "./WrapJsxPropsPattern.jsx";
 import { ConditionalRendering } from "./conditionalRendering.jsx";
 import { ListRendering } from "./ListRendering.jsx";
+import { KeyAntiPatternLists } from "./KeyAntiPatternInLists.jsx";
 
 function App() {
   return (
@@ -69,6 +70,8 @@ function App() {
       />
 
       <ListRendering />
+
+      <KeyAntiPatternLists />
     </div>
   );
 }
