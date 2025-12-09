@@ -6,7 +6,7 @@
 // }
 
 // Arrow Function
-export const Button = ()=> 
+export const ButtonWithArrowAndSimpleFunction = ()=> 
 {
    return <button>Click Me</button> 
 }

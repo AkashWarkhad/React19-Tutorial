@@ -1,7 +1,7 @@
 import React from "react";
 
 // With JSX - clean & redable
-export const Card = () => 
+export const WithJSX = () => 
 {
     return (
         <div id="card">
@@ -14,7 +14,7 @@ export const Card = () =>
 };
 
 // Without JSX its complex to read & write
-export const Card2 = () => 
+export const WithoutJSX = () => 
 {
     return(
         React.createElement("div",
