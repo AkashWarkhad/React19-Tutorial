@@ -8,13 +8,16 @@ import { Rule4EmbedJSExpressionInJSXUsingCurlyBraces } from "./Rule4.jsx";
 import { PropsInMethod } from "./Props.jsx";
 import { DefaultPropsPattern } from "./DefaultPropsPattern.jsx";
 import { SpreadPropsPattern } from "./SpreadPropsPattern.jsx";
+import { WrapJsxPropsPattern } from "./WrapJsxPropsPattern.jsx";
+import { ConditionalRendering } from "./conditionalRendering.jsx";
+import { ListRendering } from "./ListRendering.jsx";
 
 function App() {
   return (
     <div>
       <h1>React World</h1>
       <ButtonWithArrowAndSimpleFunction />
-      
+
       <WithJSX />
       <WithoutJSX />
 
@@ -29,18 +32,43 @@ function App() {
         inStock={true}
         categories={["Electronis", "Computer", "Gamming"]}
       />
-      
+
       <DefaultPropsPattern
         //name="Akash" // Default value 'Guest' will be used.
-        message = "how are you?"
+        message="how are you?"
       />
 
-      <SpreadPropsPattern 
-        id = "ABC"
-        name = "James"
-        message = "Welcome to Goa hotel!"
+      <SpreadPropsPattern
+        id="ABC"
+        name="James"
+        message="Welcome to Goa hotel!"
       />
-      
+
+      <WrapJsxPropsPattern title="User Profile">
+        <p>Name</p>
+        <p>name.lastname@gmail.com</p>
+        <button>Edit Profile</button>
+      </WrapJsxPropsPattern>
+
+      <ConditionalRendering
+        name="Akash"
+        isOnline={true}
+        hideOffline={false}
+        isPremium={true}
+        isNewUser={false}
+        role="Admin"
+      />
+
+      <ConditionalRendering
+        name="Rushi"
+        isOnline={false}
+        hideOffline={false}
+        isPremium={true}
+        isNewUser={true}
+        role="VIP"
+      />
+
+      <ListRendering />
     </div>
   );
 }
