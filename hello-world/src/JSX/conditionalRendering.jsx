@@ -5,19 +5,26 @@ export const ConditionalRendering = ({
   isPremium,
   isNewUser,
   role,
-}) => {
-  if (hideOffline && !isOnline) {
+}) => 
+{
+  if (hideOffline && !isOnline) 
+  {
     // If Statement with AND
     return null;
   }
 
   let roleBadge = null; //Variable use for complex logic
 
-  if (role === "Admin") {
+  if (role === "Admin") 
+  {
     roleBadge = <span> 🔑 Admin</span>;
-  } else if (role === "Moderator") {
+  } 
+  else if (role === "Moderator") 
+  {
     roleBadge = <span> 👮‍♂️ Moderator</span>;
-  } else if (role === "Vip") {
+  } 
+  else if (role === "Vip") 
+  {
     roleBadge = <span> 💎VIP</span>;
   }
 
@@ -29,15 +36,16 @@ export const ConditionalRendering = ({
         {isNewUser && <span>🥳</span>}
         {roleBadge}
       </h3>
+
       <span>{isOnline ? "🟢Online" : "⚫Offline"}</span>
 
       <p>{isOnline ? "Available for chat" : "Not Available"}</p>
 
-      {isOnline ? ( // Ternary Operator
-        <button>Send Message</button>
-      ) : (
-        <small>Check back later</small>
-      )}
+      { isOnline   // Ternary Operator
+        ? (<button>Send Message</button>) 
+        : (<small>Check back later</small>)
+      }
+
     </div>
   );
 };

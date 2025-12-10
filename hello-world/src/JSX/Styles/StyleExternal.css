@@ -1,0 +1,14 @@
+.base {
+    background-color: lightgreen;
+    color: black;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.pass {
+    background-color: lightgreen;
+}
+
+.fail {
+    background-color: red;
+}
