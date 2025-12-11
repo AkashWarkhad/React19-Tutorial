@@ -18,6 +18,9 @@ import { ModuleStyle } from "./Styles/ModuleStyle.jsx";
 import { EventHandling } from "./EventHandling.jsx";
 import { SubscribeEvent } from "./EventHandlerExample/SubsribeEvent.jsx";
 import { ContactUsEvent } from "./EventHandlerExample/ContactUsEvent.jsx";
+import { IncreaseCounterUsingLazyInitializationWithUseState } from "./State/IncreaseCounterUsingLazyInitializationWithUseState.jsx";
+import { UseStateLoginExample } from "./State/UseStateLoginExample.jsx";
+import { HookRules } from "./State/HookRules.jsx";
 
 function App() {
   return (
@@ -97,6 +100,12 @@ function App() {
 
       <SubscribeEvent />
       <ContactUsEvent />
+
+      <IncreaseCounterUsingLazyInitializationWithUseState />
+      <UseStateLoginExample/>
+      
+      <HookRules />
+      <HookRules isPremium= {true}/>
     </div>
   );
 }
