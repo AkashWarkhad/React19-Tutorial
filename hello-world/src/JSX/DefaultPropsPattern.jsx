@@ -1,4 +1,5 @@
-export const DefaultPropsPattern = ({id = "defaultId", name = "Guest", message = "Deafault Message!"}) => 
+export const DefaultPropsPattern = 
+({id = "defaultId", name = "Guest", message = "Deafault Message!"}) => 
 {
     return(
         <h4>
