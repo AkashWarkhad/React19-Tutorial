@@ -21,44 +21,49 @@ import { ContactUsEvent } from "./EventHandlerExample/ContactUsEvent.jsx";
 import { IncreaseCounterUsingLazyInitializationWithUseState } from "./State/IncreaseCounterUsingLazyInitializationWithUseState.jsx";
 import { UseStateLoginExample } from "./State/UseStateLoginExample.jsx";
 import { HookRules } from "./State/HookRules.jsx";
+import { SetStateUsingPrevState } from "./State/SetStateUsingPrevState.jsx";
+import { BatchUpdates } from "./State/BatchUpdates.jsx";
+import { UseStateWithObject } from "./State/UseStateWithObject.jsx";
+import { UseStateWithArrayCollection } from "./State/UseStateWithArrayCollection.jsx";
+import { SharingStateBetweenComponent } from "./State/SharingStateBetweenComponents.jsx";
 
 function App() {
   return (
     <div>
       <h1>React World</h1>
-      <ButtonWithArrowAndSimpleFunction />
+      <ButtonWithArrowAndSimpleFunction />  <hr></hr>
 
       <WithJSX />
-      <WithoutJSX />
+      <WithoutJSX />  <hr></hr>
 
       <Rule1ReturnSingleRootElementFromComponent />
       <Rule2AllTagsMustBeProperlyClosed />
       <Rule3AttMustBeWrittenInCamelCase />
-      <Rule4EmbedJSExpressionInJSXUsingCurlyBraces />
+      <Rule4EmbedJSExpressionInJSXUsingCurlyBraces />  <hr></hr>
 
       <PropsInMethod
         title="Gamming Laptop" // String uses "" & others uses {}.
         price={50000}
         inStock={true}
         categories={["Electronis", "Computer", "Gamming"]}
-      />
+      />  <hr></hr>
 
       <DefaultPropsPattern
         //name="Akash" // Default value 'Guest' will be used.
         message="how are you?"
-      />
+      />  <hr></hr>
 
       <SpreadPropsPattern
         id="ABC"
         name="James"
         message="Welcome to Goa hotel!"
-      />
+      />   <hr></hr>
 
       <WrapJsxPropsPattern title="User Profile">
         <p>Name</p>
         <p>name.lastname@gmail.com</p>
         <button>Edit Profile</button>
-      </WrapJsxPropsPattern>
+      </WrapJsxPropsPattern>   <hr></hr>
 
       <ConditionalRendering
         name="Akash"
@@ -67,7 +72,7 @@ function App() {
         isPremium={true}
         isNewUser={false}
         role="Admin"
-      />
+      />   <hr></hr>
 
       <ConditionalRendering
         name="Rushi"
@@ -76,36 +81,45 @@ function App() {
         isPremium={true}
         isNewUser={true}
         role="VIP"
-      />
+      />    <hr></hr>
 
-      <ListRendering />
+      <ListRendering />  <hr></hr>
 
-      <KeyAntiPatternLists />
+      <KeyAntiPatternLists />  <hr></hr>
 
       <InlineStyleJSX>Internal CSS style changes has been saved</InlineStyleJSX>
       <InlineStyleJSX statusCode="500">
         Internal CSS style failed went wrong!
-      </InlineStyleJSX>
+      </InlineStyleJSX>  <hr></hr>
 
       <ExternalStyleJSX status="pass">
         External style CSS Applied
       </ExternalStyleJSX>
       <ExternalStyleJSX status="fail">
         External style CSS Failed to Apply
-      </ExternalStyleJSX>
+      </ExternalStyleJSX>  <hr></hr>
 
-      <ModuleStyle status="pass">Using Module style CSS</ModuleStyle>
+      <ModuleStyle status="pass">Using Module style CSS</ModuleStyle> <hr></hr>
 
-      <EventHandling text="Press" />
+      <EventHandling text="Press" />  <hr></hr>
 
       <SubscribeEvent />
-      <ContactUsEvent />
+      <ContactUsEvent /> <hr></hr>
 
       <IncreaseCounterUsingLazyInitializationWithUseState />
-      <UseStateLoginExample/>
+      <UseStateLoginExample/> <hr></hr>
       
       <HookRules />
-      <HookRules isPremium= {true}/>
+      <HookRules isPremium= {true}/> <hr></hr>
+
+      <SetStateUsingPrevState /> <hr></hr>
+      
+      <BatchUpdates /> <hr></hr>
+      
+      <UseStateWithObject /> <hr></hr>
+      <UseStateWithArrayCollection /> <hr></hr>
+
+      <SharingStateBetweenComponent />
     </div>
   );
 }

@@ -23,10 +23,10 @@ export const IncreaseCounterUsingLazyInitializationWithUseState = () =>
   {
     console.log("Count before setter: ", count);
     setCount(count + 1);  // Here count++ not allowed. as set is doing this, we just need to pass next value to save in count
+    
     console.log("Count after setter: ",count);
     setCount(count + 5);
     console.log("Count after setter: ",count);
-
   };
 
   return (<button onClick={HandleCount}>Count:{count}</button>);
