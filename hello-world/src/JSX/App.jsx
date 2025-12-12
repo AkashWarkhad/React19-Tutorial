@@ -1,21 +1,21 @@
 import "../App.css";
 import { ButtonWithArrowAndSimpleFunction } from "./ArrowAndSimpleFunc.jsx";
 import { WithJSX, WithoutJSX } from "./WithAndWithoutJSX.jsx";
-import { Rule1ReturnSingleRootElementFromComponent } from "./Rule1.jsx";
-import { Rule2AllTagsMustBeProperlyClosed } from "./Rule2.jsx";
-import { Rule3AttMustBeWrittenInCamelCase } from "./Rule3.jsx";
-import { Rule4EmbedJSExpressionInJSXUsingCurlyBraces } from "./Rule4.jsx";
-import { PropsInMethod } from "./Props.jsx";
-import { DefaultPropsPattern } from "./DefaultPropsPattern.jsx";
-import { SpreadPropsPattern } from "./SpreadPropsPattern.jsx";
-import { WrapJsxPropsPattern } from "./WrapJsxPropsPattern.jsx";
-import { ConditionalRendering } from "./conditionalRendering.jsx";
-import { ListRendering } from "./ListRendering.jsx";
-import { KeyAntiPatternLists } from "./KeyAntiPatternInLists.jsx";
+import { Rule1ReturnSingleRootElementFromComponent } from "./JSXRule/Rule1.jsx";
+import { Rule2AllTagsMustBeProperlyClosed } from "./JSXRule/Rule2.jsx";
+import { Rule3AttMustBeWrittenInCamelCase } from "./JSXRule/Rule3.jsx";
+import { Rule4EmbedJSExpressionInJSXUsingCurlyBraces } from "./JSXRule/Rule4.jsx";
+import { PropsInMethod } from "./Props/Props.jsx";
+import { DefaultPropsPattern } from "./Props/DefaultPropsPattern.jsx";
+import { SpreadPropsPattern } from "./Props/SpreadPropsPattern.jsx";
+import { WrapJsxPropsPattern } from "./Props/WrapJsxPropsPattern.jsx";
+import { ConditionalRendering } from "./Rendering/conditionalRendering.jsx";
+import { ListRendering } from "./Rendering/ListRendering.jsx";
+import { KeyAntiPatternLists } from "./Rendering/KeyAntiPatternInLists.jsx";
 import { InlineStyleJSX } from "./Styles/InlineStyle.jsx";
 import { ExternalStyleJSX } from "./Styles/ExternalStyle.jsx";
 import { ModuleStyle } from "./Styles/ModuleStyle.jsx";
-import { EventHandling } from "./EventHandling.jsx";
+import { EventHandling } from "./EventHandlerExample/EventHandling.jsx";
 import { SubscribeEvent } from "./EventHandlerExample/SubsribeEvent.jsx";
 import { ContactUsEvent } from "./EventHandlerExample/ContactUsEvent.jsx";
 import { IncreaseCounterUsingLazyInitializationWithUseState } from "./UseState/IncreaseCounterUsingLazyInitializationWithUseState.jsx";
@@ -34,7 +34,21 @@ import { ImplementUseStateByUseReducer } from "./UseReducer/ImplementUseStateByU
 function App() {
   return (
     <div>
-      <h1>React World</h1>
+      
+      <h1>## Starting Hooks ##</h1>
+
+
+
+
+
+
+
+
+
+
+
+      <hr></hr> <hr></hr> <hr></hr>
+      <h1>## React19 Tutorial ##</h1>
       <ButtonWithArrowAndSimpleFunction />  <hr></hr>
 
       <WithJSX />
@@ -132,6 +146,8 @@ function App() {
       <LazyInitializationUsingReducer /> <hr></hr>
 
       <ImplementUseStateByUseReducer /> <hr></hr>
+
+      
     </div>
   );
 }
