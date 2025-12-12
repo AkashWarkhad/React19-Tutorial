@@ -18,14 +18,16 @@ import { ModuleStyle } from "./Styles/ModuleStyle.jsx";
 import { EventHandling } from "./EventHandling.jsx";
 import { SubscribeEvent } from "./EventHandlerExample/SubsribeEvent.jsx";
 import { ContactUsEvent } from "./EventHandlerExample/ContactUsEvent.jsx";
-import { IncreaseCounterUsingLazyInitializationWithUseState } from "./State/IncreaseCounterUsingLazyInitializationWithUseState.jsx";
-import { UseStateLoginExample } from "./State/UseStateLoginExample.jsx";
-import { HookRules } from "./State/HookRules.jsx";
-import { SetStateUsingPrevState } from "./State/SetStateUsingPrevState.jsx";
-import { BatchUpdates } from "./State/BatchUpdates.jsx";
-import { UseStateWithObject } from "./State/UseStateWithObject.jsx";
-import { UseStateWithArrayCollection } from "./State/UseStateWithArrayCollection.jsx";
-import { SharingStateBetweenComponent } from "./State/SharingStateBetweenComponents.jsx";
+import { IncreaseCounterUsingLazyInitializationWithUseState } from "./UseState/IncreaseCounterUsingLazyInitializationWithUseState.jsx";
+import { UseStateLoginExample } from "./UseState/UseStateLoginExample.jsx";
+import { HookRules } from "./UseState/HookRules.jsx";
+import { SetStateUsingPrevState } from "./UseState/SetStateUsingPrevState.jsx";
+import { BatchUpdates } from "./UseState/BatchUpdates.jsx";
+import { UseStateWithObject } from "./UseState/UseStateWithObject.jsx";
+import { UseStateWithArrayCollection } from "./UseState/UseStateWithArrayCollection.jsx";
+import { SharingStateBetweenComponent } from "./UseState/SharingStateBetweenComponents.jsx";
+import { CounterWithReducer } from "./UseReducer/CounterWithReducer.jsx";
+import { ShoppingCartWithReducer } from "./UseReducer/ShoppingCartWithReducer.jsx";
 
 function App() {
   return (
@@ -119,7 +121,11 @@ function App() {
       <UseStateWithObject /> <hr></hr>
       <UseStateWithArrayCollection /> <hr></hr>
 
-      <SharingStateBetweenComponent />
+      <SharingStateBetweenComponent /> <hr></hr>
+
+      <CounterWithReducer /> <hr></hr>
+
+      <ShoppingCartWithReducer /> <hr></hr>
     </div>
   );
 }
