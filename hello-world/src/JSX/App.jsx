@@ -28,6 +28,8 @@ import { UseStateWithArrayCollection } from "./UseState/UseStateWithArrayCollect
 import { SharingStateBetweenComponent } from "./UseState/SharingStateBetweenComponents.jsx";
 import { CounterWithReducer } from "./UseReducer/CounterWithReducer.jsx";
 import { ShoppingCartWithReducer } from "./UseReducer/ShoppingCartWithReducer.jsx";
+import { LazyInitializationUsingReducer } from "./UseReducer/LazyInitializationUsingReducer.jsx";
+import { ImplementUseStateByUseReducer } from "./UseReducer/ImplementUseStateByUseReducer.jsx";
 
 function App() {
   return (
@@ -126,6 +128,10 @@ function App() {
       <CounterWithReducer /> <hr></hr>
 
       <ShoppingCartWithReducer /> <hr></hr>
+
+      <LazyInitializationUsingReducer /> <hr></hr>
+
+      <ImplementUseStateByUseReducer /> <hr></hr>
     </div>
   );
 }

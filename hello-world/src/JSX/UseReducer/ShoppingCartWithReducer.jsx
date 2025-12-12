@@ -12,6 +12,7 @@ const initialState =
     totalItems: 0,
 }
 
+//               (CurrentState, ActionWantsToPerform)
 const reducer = (state, action)=> 
 {
     // action.type : To describe what happned
@@ -111,15 +112,17 @@ export const ShoppingCartWithReducer = () =>
         <div>
             <h2>Products</h2>
             {
-                products.map(prd => {
+                products.map(prd => 
+                {
                     return <div key={prd.id}>
                         <h3>
                             {prd.name} - {prd.price}
                         </h3>
                         
                         <button onClick={()=> {
-                            dispatch({
-                                type:ADD_ITEM,
+                            dispatch(
+                            {
+                                type: ADD_ITEM,
                                 payload: prd
                             })
                         }}> Add to cart
@@ -132,7 +135,7 @@ export const ShoppingCartWithReducer = () =>
                 <h2>Shopping cart</h2>
                 {
                     state.items?.length === 0 
-                        ? (<p>Your cart is empty</p>) 
+                        ? (<p>Your cart is empty</p>)
                         : (
                             <div>
                                 {
@@ -143,7 +146,7 @@ export const ShoppingCartWithReducer = () =>
                                                 {x.name} - $${x.price.toFixed(2)} X {x.quantity}
                                             </p>
                                             
-                                            <button onClick={()=> {dispatch({
+                                            <button onClick={() => { dispatch({
                                                 type: UPDATE_QUANTITY,
                                                 payload: {
                                                     id: x.id,
@@ -152,7 +155,7 @@ export const ShoppingCartWithReducer = () =>
                                             })}}><b>-</b>
                                             </button>
 
-                                            <button onClick={()=> {dispatch({
+                                            <button onClick={()=> { dispatch({
                                                 type: UPDATE_QUANTITY,
                                                 payload: {
                                                     id: x.id,
@@ -174,9 +177,13 @@ export const ShoppingCartWithReducer = () =>
                                 <h3>Total Amount: {state.totalAmount}</h3>
                                 <h3>Total Items: {state.totalItems}</h3>
 
-                                { state.items?.length > 0 && (
-                                    <button onClick = {() => dispatch({ type:CLEAR_CART})}>Clear Cart
-                                    </button>)
+                                { 
+                                    state.items?.length > 0 && 
+                                    (
+                                        <button onClick = {() => dispatch({ type: CLEAR_CART})}>
+                                            Clear Cart
+                                        </button>
+                                    )
                                 }
                             </div>
                         )
