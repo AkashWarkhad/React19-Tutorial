@@ -38,6 +38,7 @@ import RunOnceComponentDidMountAndUnmountWithClass from "./Hooks/UseEffect/RunOn
 import RunOnceUseEffectWithFunction from "./Hooks/UseEffect/RunOnceUseEffectWithFunction.jsx";
 import CleanupUsingUseEffectWithFunction from "./Hooks/UseEffect/CleanupUsingUseEffectWithFunction.jsx";
 import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithIncorrectDependency.jsx";
+import MultipleUseEffectInOneComponentWithFunction from "./Hooks/UseEffect/Example/MultipleUseEffectInOneComponentWithFunction.jsx";
 
 function App() {
   return (
@@ -56,7 +57,9 @@ function App() {
 
       <CleanupUsingUseEffectWithFunction /> <hr></hr>
 
-      <UseEffectWithIncorrectDependency />
+      <UseEffectWithIncorrectDependency /> <hr></hr>
+
+      <MultipleUseEffectInOneComponentWithFunction />
 
 
 
