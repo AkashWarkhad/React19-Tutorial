@@ -39,6 +39,7 @@ import RunOnceUseEffectWithFunction from "./Hooks/UseEffect/RunOnceUseEffectWith
 import CleanupUsingUseEffectWithFunction from "./Hooks/UseEffect/CleanupUsingUseEffectWithFunction.jsx";
 import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithIncorrectDependency.jsx";
 import MultipleUseEffectInOneComponentWithFunction from "./Hooks/UseEffect/Example/MultipleUseEffectInOneComponentWithFunction.jsx";
+import FetchingData from "./Hooks/UseEffect/Example/FetchingData.jsx";
 
 function App() {
   return (
@@ -59,9 +60,9 @@ function App() {
 
       <UseEffectWithIncorrectDependency /> <hr></hr>
 
-      <MultipleUseEffectInOneComponentWithFunction />
+      <MultipleUseEffectInOneComponentWithFunction /> <hr></hr>
 
-
+      <FetchingData />
 
 
 
