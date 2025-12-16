@@ -1,6 +1,9 @@
+// componentDidUpdate with condition on Count update <--> using UseEffect [count]
+
+
 import React, { useState, useEffect } from 'react'
 
-function ConditionalUseEffectUsingFunction() 
+function ConditionalComponetDidUpdateUsingUseEffectWithFunction() 
 {
     const [count, setCount] = useState(0);
     const [name, setName] = useState("");
@@ -27,4 +30,4 @@ function ConditionalUseEffectUsingFunction()
   )
 }
 
-export default ConditionalUseEffectUsingFunction
+export default ConditionalComponetDidUpdateUsingUseEffectWithFunction

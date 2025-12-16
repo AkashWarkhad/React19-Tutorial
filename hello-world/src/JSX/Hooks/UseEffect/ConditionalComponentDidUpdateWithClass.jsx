@@ -1,11 +1,15 @@
+// componentDidUpdate with condition on Count update
+
 import React, { Component} from "react"
 
-export default class ConditionalUseEffectUsingClass extends Component 
+export default class ConditionalComponentDidUpdateWithClass extends Component 
 {
-    constructor(props) {
+    constructor(props) 
+    {
       super(props)
     
-      this.state = {
+      this.state = 
+      {
          count : 0,
          name: ""
       }
@@ -28,11 +32,12 @@ export default class ConditionalUseEffectUsingClass extends Component
         }
     }
 
-    render(){
+    render()
+    {
         return(
             <div>
                 <input type="text" 
-                value={this.state.name}
+                value={this.state.name} // value makes the input controlled, Removing value makes it uncontrolled. Controlled inputs are preferred in React.
                 onChange={(evt)=> {
                     this.setState({
                     ...this.state,

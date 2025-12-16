@@ -1,8 +1,11 @@
+// componentDidMount which rund once in the component
+
 import React, { Component } from 'react'
 
-export default class UseEffectOnceWithClass extends Component 
+export default class RunOnceComponentDidMountAndUnmountWithClass extends Component 
 {
-    constructor(props) {
+    constructor(props) 
+    {
       super(props)
     
       this.state = {
@@ -13,7 +16,7 @@ export default class UseEffectOnceWithClass extends Component
 
     logMousePosition = (evt) => 
     { 
-        console.log("[Class] Inside LogMousePosition!!");
+        //console.log("[Class] Inside LogMousePosition!!"); // Commenting for now
         this.setState({
             x: evt.clientX,
             y: evt.clientY
@@ -24,6 +27,13 @@ export default class UseEffectOnceWithClass extends Component
     {
         console.log("[Class] Inside ComponentDidMount !");
         window.addEventListener('mousemove', this.logMousePosition);
+    }
+
+    // To unmount the event listener
+    componentWillUnmount()
+    {
+        console.log("Component Unmounted!!");
+        window.removeEventListener("mousemove", this.logMousePosition);
     }
 
     render() 

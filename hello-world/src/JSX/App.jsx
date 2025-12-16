@@ -32,10 +32,12 @@ import { LazyInitializationUsingReducer } from "./UseReducer/LazyInitializationU
 import { ImplementUseStateByUseReducer } from "./UseReducer/ImplementUseStateByUseReducer.jsx";
 import ClassCounter from "./Hooks/UseState/ClassCounter.jsx";
 import ClassComponent from "./Class/ClassComponent.jsx";
-import ConditionalUseEffectUsingClass from "./Hooks/UseEffect/ConditionalUseEffectUsingClass.jsx";
-import ConditionalUseEffectUsingFunction from "./Hooks/UseEffect/ConditionalUseEffectUsingFunction.jsx";
-import UseEffectOnceWithClass from "./Hooks/UseEffect/UseEffectOnceWithClass.jsx";
-import UseEffectOnceWithFunction from "./Hooks/UseEffect/UseEffectOnceWithFunction.jsx";
+import ConditionalComponentDidUpdateWithClass from "./Hooks/UseEffect/ConditionalComponentDidUpdateWithClass.jsx";
+import ConditionalComponetDidUpdateUsingUseEffectWithFunction from "./Hooks/UseEffect/ConditionalComponetDidUpdateUsingUseEffectWithFunction.jsx";
+import RunOnceComponentDidMountAndUnmountWithClass from "./Hooks/UseEffect/RunOnceComponentDidMountAndUnmountWithClass.jsx";
+import RunOnceUseEffectWithFunction from "./Hooks/UseEffect/RunOnceUseEffectWithFunction.jsx";
+import CleanupUsingUseEffectWithFunction from "./Hooks/UseEffect/CleanupUsingUseEffectWithFunction.jsx";
+import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithIncorrectDependency.jsx";
 
 function App() {
   return (
@@ -46,10 +48,15 @@ function App() {
 
       <ClassCounter />  <hr></hr>
 
-      <ConditionalUseEffectUsingClass />
-      <ConditionalUseEffectUsingFunction /> 
-      <UseEffectOnceWithClass />
-      <UseEffectOnceWithFunction />
+      <ConditionalComponentDidUpdateWithClass />
+      <ConditionalComponetDidUpdateUsingUseEffectWithFunction />  <hr></hr>
+      
+      <RunOnceComponentDidMountAndUnmountWithClass />
+      <RunOnceUseEffectWithFunction />  <hr></hr>
+
+      <CleanupUsingUseEffectWithFunction /> <hr></hr>
+
+      <UseEffectWithIncorrectDependency />
 
 
 
