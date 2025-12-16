@@ -42,6 +42,12 @@ import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithInc
 import MultipleUseEffectInOneComponentWithFunction from "./Hooks/UseEffect/Example/MultipleUseEffectInOneComponentWithFunction.jsx";
 import FetchingData from "./Hooks/UseEffect/Example/FetchingData.jsx";
 import ComponentA from "./Hooks/UseContext/ComponentA.jsx";
+import CounterObjectWithReducer from './Hooks/UseReducer/CounterObjectWithReducer.jsx';
+import UseReducerWithUseContext from './Hooks/UseReducer/UseReducerWithUseContext.jsx';
+import GetDataWithUseEffectAndUseState from './Hooks/UseReducer/GetDataWithUseEffectAndUseState.jsx';
+import GetDataWithUseEffectAndUseReducer from './Hooks/UseReducer/GetDataWithUseEffectAndUseReducer.jsx';
+import ParentComponent from './Hooks/UseCallback/ParentComponent.jsx';
+import CounterWithMemo from './Hooks/UseMemo/CounterWithMemo.jsx';
 
 // Create context
 export const UserContext = React.createContext();
@@ -75,7 +81,16 @@ function App() {
         <ChannelContext.Provider value={"Codevolution"}>
            <ComponentA />
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> <hr></hr>
+
+      <UseReducerWithUseContext /> <hr></hr>
+
+      <GetDataWithUseEffectAndUseState />
+      <GetDataWithUseEffectAndUseReducer /> <hr></hr>
+
+      <ParentComponent /> <hr></hr>
+
+      <CounterWithMemo /> <hr></hr>
       
 
       
@@ -179,7 +194,8 @@ function App() {
 
       <SharingStateBetweenComponent /> <hr></hr>
 
-      <CounterWithReducer /> <hr></hr>
+      <CounterWithReducer /> 
+      <CounterObjectWithReducer /> <hr></hr>
 
       <ShoppingCartWithReducer /> <hr></hr>
 
