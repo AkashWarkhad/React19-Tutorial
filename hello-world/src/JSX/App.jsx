@@ -1,3 +1,4 @@
+import React from 'react'
 import "../App.css";
 import { ButtonWithArrowAndSimpleFunction } from "./ArrowAndSimpleFunc.jsx";
 import { WithJSX, WithoutJSX } from "./WithAndWithoutJSX.jsx";
@@ -40,6 +41,11 @@ import CleanupUsingUseEffectWithFunction from "./Hooks/UseEffect/CleanupUsingUse
 import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithIncorrectDependency.jsx";
 import MultipleUseEffectInOneComponentWithFunction from "./Hooks/UseEffect/Example/MultipleUseEffectInOneComponentWithFunction.jsx";
 import FetchingData from "./Hooks/UseEffect/Example/FetchingData.jsx";
+import ComponentA from "./Hooks/UseContext/ComponentA.jsx";
+
+// Create context
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
@@ -62,7 +68,17 @@ function App() {
 
       <MultipleUseEffectInOneComponentWithFunction /> <hr></hr>
 
-      <FetchingData />
+      <FetchingData /> <hr></hr>
+
+      <h3>Use Context Hook</h3>
+      <UserContext.Provider value={"UseContext"}>
+        <ChannelContext.Provider value={"Codevolution"}>
+           <ComponentA />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
+      
+
+      
 
 
 
