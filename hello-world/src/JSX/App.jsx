@@ -30,13 +30,26 @@ import { CounterWithReducer } from "./UseReducer/CounterWithReducer.jsx";
 import { ShoppingCartWithReducer } from "./UseReducer/ShoppingCartWithReducer.jsx";
 import { LazyInitializationUsingReducer } from "./UseReducer/LazyInitializationUsingReducer.jsx";
 import { ImplementUseStateByUseReducer } from "./UseReducer/ImplementUseStateByUseReducer.jsx";
+import ClassCounter from "./Hooks/UseState/ClassCounter.jsx";
+import ClassComponent from "./Class/ClassComponent.jsx";
+import ConditionalUseEffectUsingClass from "./Hooks/UseEffect/ConditionalUseEffectUsingClass.jsx";
+import ConditionalUseEffectUsingFunction from "./Hooks/UseEffect/ConditionalUseEffectUsingFunction.jsx";
+import UseEffectOnceWithClass from "./Hooks/UseEffect/UseEffectOnceWithClass.jsx";
+import UseEffectOnceWithFunction from "./Hooks/UseEffect/UseEffectOnceWithFunction.jsx";
 
 function App() {
   return (
     <div>
-      
-      <h1>## Starting Hooks ##</h1>
+      <h1>## Starting Hooks ##</h1> 
 
+      <ClassComponent /> <hr></hr>
+
+      <ClassCounter />  <hr></hr>
+
+      <ConditionalUseEffectUsingClass />
+      <ConditionalUseEffectUsingFunction /> 
+      <UseEffectOnceWithClass />
+      <UseEffectOnceWithFunction />
 
 
 

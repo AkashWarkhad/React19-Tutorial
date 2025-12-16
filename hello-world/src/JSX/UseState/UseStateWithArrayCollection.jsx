@@ -49,7 +49,7 @@ export const UseStateWithArrayCollection = () =>
                     items.map((item) =>
                     {
                         return (
-                        <li key = {item.id} >
+                        <li key = {item.id}>
 
                             <span style= {{ textDecoration: item.done ? "line-through": "none"}}>
                                 {item.id}--{item.text}
