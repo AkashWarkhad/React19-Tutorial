@@ -25,6 +25,7 @@ export const UseStateLoginExample = () =>
                 onChange={HandleChange}/>
             <br></br>
             <p>Dynamic Data from input :{message}</p>
+            <p>Json Content : {JSON.stringify(message)}</p>
         </>
     );
 };

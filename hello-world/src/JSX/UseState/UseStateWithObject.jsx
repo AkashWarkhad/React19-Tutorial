@@ -42,6 +42,7 @@ export const UseStateWithObject = () => {
             <button onClick={ChangeName}>Change the user name to Shubham.</button>
             <button onClick={UpdateAge}>Increase Age by 1</button>
             <button onClick={UpdateNameAndEmail}>Update Email</button>
+            <p>Json Format : {JSON.stringify(user)}</p>
         </div>
     )
 }
