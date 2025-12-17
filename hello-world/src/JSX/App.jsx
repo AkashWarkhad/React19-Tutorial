@@ -1,3 +1,4 @@
+import React from 'react'
 import "../App.css";
 import { ButtonWithArrowAndSimpleFunction } from "./ArrowAndSimpleFunc.jsx";
 import { WithJSX, WithoutJSX } from "./WithAndWithoutJSX.jsx";
@@ -39,6 +40,24 @@ import RunOnceUseEffectWithFunction from "./Hooks/UseEffect/RunOnceUseEffectWith
 import CleanupUsingUseEffectWithFunction from "./Hooks/UseEffect/CleanupUsingUseEffectWithFunction.jsx";
 import UseEffectWithIncorrectDependency from "./Hooks/UseEffect/UseEffectWithIncorrectDependency.jsx";
 import MultipleUseEffectInOneComponentWithFunction from "./Hooks/UseEffect/Example/MultipleUseEffectInOneComponentWithFunction.jsx";
+import FetchingData from "./Hooks/UseEffect/Example/FetchingData.jsx";
+import ComponentA from "./Hooks/UseContext/ComponentA.jsx";
+import CounterObjectWithReducer from './Hooks/UseReducer/CounterObjectWithReducer.jsx';
+import UseReducerWithUseContext from './Hooks/UseReducer/UseReducerWithUseContext.jsx';
+import GetDataWithUseEffectAndUseState from './Hooks/UseReducer/GetDataWithUseEffectAndUseState.jsx';
+import GetDataWithUseEffectAndUseReducer from './Hooks/UseReducer/GetDataWithUseEffectAndUseReducer.jsx';
+import ParentComponent from './Hooks/UseCallback/ParentComponent.jsx';
+import CounterWithMemo from './Hooks/UseMemo/CounterWithMemo.jsx';
+import FocusInput from './Hooks/UseRef/FocusInput.jsx';
+import ClassTimer from './Hooks/UseRef/ClassTimer.jsx';
+import FunctionTimer from './Hooks/UseRef/FunctionTimer.jsx';
+import DocTitle1 from './Hooks/CustomHook/UseDocumentTitleHook/DocTitle.jsx';
+import CounterOne from './Hooks/CustomHook/UseCounterHook/CounterOne.jsx';
+import UserForm from './Hooks/CustomHook/UseInputHook/UserForm.jsx';
+
+// Create context
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
@@ -59,16 +78,35 @@ function App() {
 
       <UseEffectWithIncorrectDependency /> <hr></hr>
 
-      <MultipleUseEffectInOneComponentWithFunction />
+      <MultipleUseEffectInOneComponentWithFunction /> <hr></hr>
 
+      <FetchingData /> <hr></hr>
 
+      <h3>Use Context Hook</h3>
+      <UserContext.Provider value={"UseContext"}>
+        <ChannelContext.Provider value={"Codevolution"}>
+           <ComponentA />
+        </ChannelContext.Provider>
+      </UserContext.Provider> <hr></hr>
 
+      <UseReducerWithUseContext /> <hr></hr>
 
+      <GetDataWithUseEffectAndUseState />
+      <GetDataWithUseEffectAndUseReducer /> <hr></hr>
 
+      <ParentComponent /> <hr></hr>
 
+      <CounterWithMemo /> <hr></hr>
+      
+      <FocusInput /> 
+      <ClassTimer />
+      <FunctionTimer /><hr></hr>
 
+      <DocTitle1 />
+      <CounterOne />
+      <UserForm /> <hr></hr>
 
-
+{/* ###################################################################################### */}
 
       <hr></hr> <hr></hr> <hr></hr>
       <h1>## React19 Tutorial ##</h1>
@@ -162,7 +200,8 @@ function App() {
 
       <SharingStateBetweenComponent /> <hr></hr>
 
-      <CounterWithReducer /> <hr></hr>
+      <CounterWithReducer /> 
+      <CounterObjectWithReducer /> <hr></hr>
 
       <ShoppingCartWithReducer /> <hr></hr>
 
