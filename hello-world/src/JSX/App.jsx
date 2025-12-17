@@ -48,6 +48,12 @@ import GetDataWithUseEffectAndUseState from './Hooks/UseReducer/GetDataWithUseEf
 import GetDataWithUseEffectAndUseReducer from './Hooks/UseReducer/GetDataWithUseEffectAndUseReducer.jsx';
 import ParentComponent from './Hooks/UseCallback/ParentComponent.jsx';
 import CounterWithMemo from './Hooks/UseMemo/CounterWithMemo.jsx';
+import FocusInput from './Hooks/UseRef/FocusInput.jsx';
+import ClassTimer from './Hooks/UseRef/ClassTimer.jsx';
+import FunctionTimer from './Hooks/UseRef/FunctionTimer.jsx';
+import DocTitle1 from './Hooks/CustomHook/UseDocumentTitleHook/DocTitle.jsx';
+import CounterOne from './Hooks/CustomHook/UseCounterHook/CounterOne.jsx';
+import UserForm from './Hooks/CustomHook/UseInputHook/UserForm.jsx';
 
 // Create context
 export const UserContext = React.createContext();
@@ -92,6 +98,13 @@ function App() {
 
       <CounterWithMemo /> <hr></hr>
       
+      <FocusInput /> 
+      <ClassTimer />
+      <FunctionTimer /><hr></hr>
+
+      <DocTitle1 />
+      <CounterOne />
+      <UserForm /> <hr></hr>
 
       
 

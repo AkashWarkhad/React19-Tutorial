@@ -23,7 +23,6 @@ function CounterWithMemo()
         return counter1 % 2 === 0
     }, [counter1]);
     
-
     return (
         <div>
             <b>Counter With Memo</b> <br></br>
